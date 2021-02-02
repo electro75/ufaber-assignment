@@ -1,6 +1,8 @@
 .pre-sub-container {
-    padding: 4.2 10rem;
+    padding: 4.2rem 10rem;
     display: flex;
+    justify-content: space-around;
+    
 }
 
 .text-container {
@@ -8,9 +10,6 @@
     padding: 5rem 0;    
 }
 
-.sub--container {
-    /* width: 95%; */
-}
 
 .hl__t {
     font-weight: 900;    
@@ -28,10 +27,9 @@
 }
 
 .bg--container {
-    margin-top: 5rem;
-    /* height: 40%; */
+    margin-top: 5rem;    
     color: #ffffff;
-    background-image:linear-gradient(to right bottom,rgba(46, 38, 51, 0.8), rgba(46, 38, 51, 0.8)), url('../../assets//assign-copy-p1-004.png');
+    background-image:linear-gradient(to right bottom,rgba(46, 38, 51, 0.95), rgba(46, 38, 51, 0.95)), url('../../assets//assign-copy-p1-004.png');
     background-size: cover;
     background-position: top;
     text-align: center;
@@ -41,4 +39,5 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
+    height: 14rem;
 }

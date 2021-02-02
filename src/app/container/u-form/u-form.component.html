@@ -1,1 +1,45 @@
-<p>u-form works!</p>
+<div class="u-form-container">
+    <div class="title--container">
+        <h2 class="form--title" >Book a Free Demo Class</h2>
+        <p class="hightlight--text" >Limited Seats Only!</p>
+    </div>
+
+    
+    <div class="form--section">
+        <form class="field--container" [formGroup]="registerForm" >
+
+            <mat-form-field class="field" appearance="outline"  >
+                <mat-label>Mobile Number</mat-label>
+                <div style="display: flex" >                    
+                    <input matInput placeholder="Enter Mobile Number" >
+                </div>
+            
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="field" >
+                <mat-label>Full Name</mat-label>
+                <input matInput placeholder="Enter Full Name">
+                                
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="field" >
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Enter Email">
+                                
+            </mat-form-field>
+
+            <div class="select--container">
+                <p class="select--desc" >What describes you best?</p>
+                <mat-form-field appearance="outline" class="field select--field" >                    
+                    <mat-select [formControl]="occupationControl" required class="cust--font">                      
+                        <mat-option value="" class="cust--font"  style="color: #2E2633" > Select Options </mat-option>
+                        <mat-option class="cust--font" *ngFor="let occupation of occupations" [value]="occupation">
+                            {{occupation}}
+                        </mat-option>
+                    </mat-select>                                        
+                  </mat-form-field>
+            </div>
+        </form>
+        
+    </div>
+</div>

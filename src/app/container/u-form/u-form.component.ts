@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-u-form',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private __fb: FormBuilder) { }
+
+  registerForm: FormGroup;  
+  occupationControl = new FormControl('', Validators.required);
+  
+  occupations : string[] = ['Working Professional', 'College Student', 'Full time aspirant', 'Other'];
 
   ngOnInit(): void {
+    this.registerForm = this.__fb.group({
+      occupation: this.occupationControl
+    })
   }
 
 }
